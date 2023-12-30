@@ -4,7 +4,7 @@ description: See how to create and use Power Automate hosted machines.
 author: kenseongtan
 ms.subservice: desktop-flow
 ms.topic: conceptual
-ms.date: 09/21/2023
+ms.date: 12/28/2023
 ms.author: kenseongtan
 ms.reviewer: angieandrews
 contributors:
@@ -265,10 +265,10 @@ The last step before using your image in Power Automate is to share the image wi
 
 1. Select **New** > **VM image**.
 
-1. Enter an image name, a description, and the usage.
+1. Enter a VM image name, a description, and the usage.
 
-    - **Image name:** A unique name to identify the image.
-    - **Image description:** An optional description for the image.
+    - **VM Image name:** A unique name to identify the image.
+    - **VM Image description:** An optional description for the image.
     - **Use with:** Select either **Hosted machine** or **Both**, if you want the image to work with both hosted machines and hosted machine groups.
 
 1. Select one of the images that you have access to from the Azure Compute Gallery.
@@ -454,7 +454,8 @@ You can share your hosted machines with other users so they can run desktop flow
     **User** permission only allows the targeted user to run desktop flows on the selected hosted machine. A **Co-Owner** can also edit the hosted machine details.
 
 > [!NOTE]
-> When a user isn't part of an environment anymore, you may continue to see the user as deactivated. You'll be notified in the **Manage access** section of the hosted machine if it's shared with deactivated users. In this situation, remove access to them.
+> - Sign-in access is only available to the creator of the hosted machine.
+> - When a user isn't part of an environment anymore, you may continue to see the user as deactivated. You'll be notified in the **Manage access** section of the hosted machine if it's shared with deactivated users. In this situation, remove access to them.
 
 ## Run desktop flows on hosted machines
 
@@ -464,6 +465,27 @@ To find more information about triggering desktop flows from cloud flows, go to 
 
 > [!NOTE]
 > If you intend to run unattended desktop flows on your hosted machine using the default virtula machine (VM) image option, you'll need to [disable Network Level Authentication](/troubleshoot/power-platform/power-automate/ui-flows-run-failed-with-aadlogonfailure-error) on your machine.
+
+
+## Restart hosted machines
+
+Power Automate enables you to restart your hosted machines from the Power Automate portal. To restart your hosted machine:
+
+1. Sign in to [Power Automate](https://make.powerautomate.com).
+
+1. Go to **Monitor** > **Machines**.
+
+1. Select the **Machines** tab.
+
+1. Select a hosted machine in the list and navigate to the details page of it.
+
+1. Select **Restart machine**.
+
+> [!NOTE]
+> The hosted machine is restart may take a few minutes to complete. Please wait for a few minutes before trying to [access the hosted machine](#access-a-hosted-machine).
+
+:::image type="content" source="media/hosted-machines/restart-hosted-machine.png" alt-text="Screenshot of the restart hosted machine capability.":::
+
 
 ## Permissions based on security roles
 
